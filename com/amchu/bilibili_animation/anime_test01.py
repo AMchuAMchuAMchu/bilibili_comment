@@ -24,6 +24,7 @@ w = requests.get(url, headers=headers).text
 json_comment = json.loads(w)
 total = json_comment['data']['list']  # url中list中存储的内容
 num = json_comment['data']['total']  # total中的内容，一共有多少个url
+print(num)
 s = json_comment['data']  # url中的所有内容
 j = 0
 count = 0
@@ -37,7 +38,7 @@ head = '''<!DOCTYPE html>
 
 <body>'''
 lovely.write(head)
-while j < num:
+while count < num:
     total = json_comment['data']['list']
     for i in range(len(total)):
         num01 = np.random.randint(low=0, high=256)
@@ -50,7 +51,6 @@ while j < num:
         num01, num02, num03, num04, num01, num02, num03, num04, count, comment))
         lovely.write('\n')
         print(count, '>>', comment)
-    j += 1
     next = json_comment['data']['next']  # 获取next中的内容
     next1 = str(next)
     url1 = url + '&cursor=' + next1
