@@ -30,5 +30,5 @@ wc = wordcloud.WordCloud(font_path="msyh.ttc",
                          max_words=500,stopwords=s)
 # msyh.ttc电脑本地字体，写可以写成绝对路径
 wc.generate(text) # 加载词云文本
-wc.to_file("d:/lovely02.png") # 保存词云文件
+wc.to_file("lovely.png") # 保存词云文件
 
