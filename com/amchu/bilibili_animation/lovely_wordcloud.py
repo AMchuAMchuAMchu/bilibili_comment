@@ -6,11 +6,6 @@
 # Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
 
 
-import requests
-from bs4 import BeautifulSoup
-import time
-import random
-
 import jieba
 import wordcloud
 # 读取文本
@@ -30,5 +25,5 @@ wc = wordcloud.WordCloud(font_path="msyh.ttc",
                          max_words=500,stopwords=s)
 # msyh.ttc电脑本地字体，写可以写成绝对路径
 wc.generate(text) # 加载词云文本
-wc.to_file("lovely.png") # 保存词云文件
+wc.to_file("d:/lovely02.png") # 保存词云文件
 
