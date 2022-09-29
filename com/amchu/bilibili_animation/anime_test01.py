@@ -28,38 +28,40 @@ print(num)
 s = json_comment['data']  # url中的所有内容
 j = 0
 count = 0
-lovely = open(file='d:/lovely.html', encoding='utf-8', mode='w')
-head = '''<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-
-<body>'''
-lovely.write(head)
+lovely = open(file='d:/lovelyInfo.txt', encoding='utf-8', mode='w')
+# head = '''<!DOCTYPE html>
+# <html lang="en">
+# <head>
+#     <meta charset="UTF-8">
+#     <title>Title</title>
+# </head>
+#
+# <body>'''
+# lovely.write(head)
 while count < num:
     total = json_comment['data']['list']
     for i in range(len(total)):
-        num01 = np.random.randint(low=0, high=256)
-        num02 = np.random.randint(low=0, high=256)
-        num03 = np.random.randint(low=0, high=256)
-        num04 = np.random.randint(low=4, high=10) * 0.1
+        # num01 = np.random.randint(low=0, high=256)
+        # num02 = np.random.randint(low=0, high=256)
+        # num03 = np.random.randint(low=0, high=256)
+        # num04 = np.random.randint(low=4, high=10) * 0.1
         count += 1
         comment = total[i]['content']  # 获取url中的评论
-        lovely.writelines('<h1 style="background-color: rgba(%d,%d,%d,%f);color: rgba(%d,%d,%d,%f)">%s >> %s</h1>' % (
-        num01, num02, num03, num04, num01, num02, num03, num04, count, comment))
+        # lovely.writelines('<h1 style="background-color: rgba(%d,%d,%d,%f);color: rgba(%d,%d,%d,%f)">%s >> %s</h1>' % (
+        # num01, num02, num03, num04, num01, num02, num03, num04, count, comment))
+        lovely.writelines(comment)
         lovely.write('\n')
-        print(count, '>>', comment)
+        print(count)
+        # print(count, '>>', comment)
     next = json_comment['data']['next']  # 获取next中的内容
     next1 = str(next)
     url1 = url + '&cursor=' + next1
     response = requests.get(url1, headers=headers).text
     json_comment = json.loads(response)
 
-end = '''</body>
-</html>'''
-lovely.write(end)
+# end = '''</body>
+# </html>'''
+# lovely.write(end)
 end = datetime.datetime.now().second
 print('耗时:',end - start,'秒')
 lovely.close()
