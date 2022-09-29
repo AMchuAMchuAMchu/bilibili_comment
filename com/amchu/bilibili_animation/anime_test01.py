@@ -4,11 +4,15 @@
 # Version ==> 1.0
 # CreateTime ==> 2022-09-29 19:43:01
 # Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
+import datetime
 import random
 
 import requests
 import json
 import numpy as np
+
+
+start = datetime.datetime.now().second
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36"}  # 伪装成浏览器，绕过反爬
@@ -56,5 +60,6 @@ while j < num:
 end = '''</body>
 </html>'''
 lovely.write(end)
-
+end = datetime.datetime.now().second
+print('耗时:',end - start,'秒')
 lovely.close()
