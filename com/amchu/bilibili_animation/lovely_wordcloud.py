@@ -14,7 +14,7 @@ import random
 import jieba
 import wordcloud
 # 读取文本
-with open("d:/lovely.",encoding="utf-8",mode='r') as f:
+with open("d:/lovelyInfo.txt",encoding="utf-8",mode='r') as f:
     s = f.read()
 print(s)
 ls = jieba.lcut(s) # 生成分词列表
@@ -30,5 +30,5 @@ wc = wordcloud.WordCloud(font_path="msyh.ttc",
                          max_words=500,stopwords=s)
 # msyh.ttc电脑本地字体，写可以写成绝对路径
 wc.generate(text) # 加载词云文本
-wc.to_file("lovely.png") # 保存词云文件
+wc.to_file("d:/lovely02.png") # 保存词云文件
 
