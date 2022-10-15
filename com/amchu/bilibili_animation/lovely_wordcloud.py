@@ -10,7 +10,7 @@ import jieba
 import wordcloud
 # 读取文本
 # with open("d:/lovelyInfo.txt",encoding="utf-8",mode='r') as f:
-with open("d:/刀剑神域Alicization.txt",encoding="utf-8",mode='r') as f:
+with open("d:/SAOAlicization_war_of_underworld_end.txt",encoding="utf-8",mode='r') as f:
     s = f.read()
 print(s)
 ls = jieba.lcut(s) # 生成分词列表
@@ -26,5 +26,5 @@ wc = wordcloud.WordCloud(font_path="msyh.ttc",
                          max_words=500,stopwords=s)
 # msyh.ttc电脑本地字体，写可以写成绝对路径
 wc.generate(text) # 加载词云文本
-wc.to_file("d:/刀剑神域Alicization.png") # 保存词云文件
+wc.to_file("d:/SAOAlicization_war_of_underworld_end.png") # 保存词云文件
 
