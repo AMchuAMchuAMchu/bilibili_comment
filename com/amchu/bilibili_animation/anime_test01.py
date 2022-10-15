@@ -15,14 +15,15 @@ import numpy as np
 start = datetime.datetime.now().second
 
 headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36"}  # 伪装成浏览器，绕过反爬
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"}  # 伪装成浏览器，绕过反爬
 # url='https://api.bilibili.com/pgc/review/short/list?media_id=5852&ps=20&sort=0'
 # url = 'https://api.bilibili.com/pgc/review/short/list?media_id=28229676&ps=20&sort=0'
-url = 'https://api.bilibili.com/pgc/review/short/list?media_id=130412&ps=20&sort=0'
+# url = 'https://api.bilibili.com/pgc/review/short/list?media_id=130412&ps=20&sort=0'
+url = 'https://api.bilibili.com/pgc/review/short/list?media_id=28228119&ps=20&sort=0'
 
 
 # 发送get请求
-w = requests.get(url, headers=headers).text
+w = requests.request(method='get',url=url, headers=headers).text
 json_comment = json.loads(w)
 total = json_comment['data']['list']  # url中list中存储的内容
 num = json_comment['data']['total']  # total中的内容，一共有多少个url
@@ -31,7 +32,7 @@ s = json_comment['data']  # url中的所有内容
 j = 0
 count = 0
 # lovely = open(file='d:/lovely.txt', encoding='utf-8', mode='w')
-lovely = open(file='d:/刀剑神域Alicization.txt', encoding='utf-8', mode='w')
+lovely = open(file='d:/刀剑神域Alicization_war_of_underworld_end.txt', encoding='utf-8', mode='w')
 # head = '''<!DOCTYPE html>
 # <html lang="en">
 # <head>
