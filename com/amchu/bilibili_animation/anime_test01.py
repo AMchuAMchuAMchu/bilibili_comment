@@ -32,7 +32,7 @@ s = json_comment['data']  # url中的所有内容
 j = 0
 count = 0
 # lovely = open(file='d:/lovely.txt', encoding='utf-8', mode='w')
-lovely = open(file='d:/刀剑神域Alicization_war_of_underworld_end.txt', encoding='utf-8', mode='w')
+lovely = open(file='d:/SAOAlicization_war_of_underworld_end.txt', encoding='utf-8', mode='w')
 # head = '''<!DOCTYPE html>
 # <html lang="en">
 # <head>
