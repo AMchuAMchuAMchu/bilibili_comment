@@ -17,7 +17,9 @@ start = datetime.datetime.now().second
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36"}  # 伪装成浏览器，绕过反爬
 # url='https://api.bilibili.com/pgc/review/short/list?media_id=5852&ps=20&sort=0'
-url = 'https://api.bilibili.com/pgc/review/short/list?media_id=28229676&ps=20&sort=0'
+# url = 'https://api.bilibili.com/pgc/review/short/list?media_id=28229676&ps=20&sort=0'
+url = 'https://api.bilibili.com/pgc/review/short/list?media_id=130412&ps=20&sort=0'
+
 
 # 发送get请求
 w = requests.get(url, headers=headers).text
@@ -28,7 +30,8 @@ print(num)
 s = json_comment['data']  # url中的所有内容
 j = 0
 count = 0
-lovely = open(file='d:/lovelyInfo.txt', encoding='utf-8', mode='w')
+# lovely = open(file='d:/lovely.txt', encoding='utf-8', mode='w')
+lovely = open(file='d:/刀剑神域Alicization.txt', encoding='utf-8', mode='w')
 # head = '''<!DOCTYPE html>
 # <html lang="en">
 # <head>
@@ -51,8 +54,8 @@ while count < num:
         # num01, num02, num03, num04, num01, num02, num03, num04, count, comment))
         lovely.writelines(comment)
         lovely.write('\n')
-        print(count)
-        # print(count, '>>', comment)
+        # print(count)
+        print(count, '>>', comment)
     next = json_comment['data']['next']  # 获取next中的内容
     next1 = str(next)
     url1 = url + '&cursor=' + next1
