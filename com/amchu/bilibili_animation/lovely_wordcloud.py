@@ -10,7 +10,7 @@ import jieba
 import wordcloud
 # 读取文本
 # with open("d:/lovelyInfo.txt",encoding="utf-8",mode='r') as f:
-s = open(r"D:\_01_后端开发笔记\_04_Python以及遇到的各种问题\_02_bilibili_comment\_00_demo\_02_刀剑神域Alicization_war_of_underworld\SAOAlicization_war_of_underworld_end.txt",encoding="utf-8",mode='r').read()
+s = open(r"D:\_01_后端开发笔记\_04_Python以及遇到的各种问题\_02_bilibili_comment\_00_demo\_01_sao_season1\sao_season01.txt",encoding="utf-8",mode='r').read()
 
 print(s)
 ls = jieba.lcut(s) # 生成分词列表
@@ -26,5 +26,5 @@ wc = wordcloud.WordCloud(font_path="msyh.ttc",
                          max_words=500,stopwords=s)
 # msyh.ttc电脑本地字体，写可以写成绝对路径
 wc.generate(text) # 加载词云文本
-wc.to_file(r"D:\seldom\rd\Python_ProjectAll\bilibili_comment\com\amchu\bilibili_animation\demo.png") # 保存词云文件
+wc.to_file(r"D:\_01_后端开发笔记\_04_Python以及遇到的各种问题\_02_bilibili_comment\_00_demo\_01_sao_season1\sao_season01.png") # 保存词云文件
 
