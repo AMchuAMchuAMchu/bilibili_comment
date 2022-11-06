@@ -10,7 +10,7 @@ import jieba
 import wordcloud
 # 读取文本
 # with open("d:/lovelyInfo.txt",encoding="utf-8",mode='r') as f:
-s = open(r"D:\_01_后端开发笔记\_04_Python以及遇到的各种问题\_02_bilibili_comment\_00_demo\_01_sao_season1\sao_season01.txt",encoding="utf-8",mode='r').read()
+s = open(r"D:\_01_后端开发笔记\_04_Python以及遇到的各种问题\_02_bilibili_comment\_00_demo\_02_sao_season2\sao_season2.txt",encoding="utf-8",mode='r').read()
 
 print(s)
 ls = jieba.lcut(s) # 生成分词列表
