@@ -19,6 +19,15 @@ print(res01.ok)
 
 res01.encoding = 'utf-8'
 
-context = json.loads(res01.text)
+context01 = json.loads(res01.text)
 
-print(context)
+content02 = context01['html']
+
+res02 = BeautifulSoup(content02,'html.parser')
+
+
+# print(content02)
+i = 0
+for item in res02.select('.short'):
+    i += 1
+    print(i,'>>',item.text)
