@@ -5,7 +5,7 @@ import re
 findcomment = re.compile(r'<span class="short">(.*)</span>')  # 根据网页的源代码写一个正则表达式,对应评论的文本
 
 def GetTxt(start):
-    url = 'https://movie.douban.com/subject/1849031/comments?start=' + \
+    url = 'https://movie.douban.com/subject/25804168/comments?percent_type=&start=' + \
              str(start) + '&limit=20&sort=new_score&status=P'
     head = {  # 模拟浏览器头部信息，向服务器发送消息。Firefox浏览器头部信息如下：
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0"
