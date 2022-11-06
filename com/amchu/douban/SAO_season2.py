@@ -8,7 +8,7 @@ def GetTxt(start):
     url = 'https://movie.douban.com/subject/25804168/comments?percent_type=&start=' + \
              str(start) + '&limit=20&sort=new_score&status=P'
     head = {  # 模拟浏览器头部信息，向服务器发送消息。Firefox浏览器头部信息如下：
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0"
+        "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
     }
     request = urllib.request.Request(url, headers=head)
     response = urllib.request.urlopen(request)
@@ -29,7 +29,7 @@ def GetTxt(start):
 
 
 def main():
-    for i in range(1, 201, 20):  # 原本想多爬取一些，但是网站只允许看到前200条，之后需要登录
+    for i in range(1, 3789, 20):  # 原本想多爬取一些，但是网站只允许看到前200条，之后需要登录
         print(i)
         GetTxt(i)
 
