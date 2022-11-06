@@ -19,7 +19,7 @@ headers = {
 # url='https://api.bilibili.com/pgc/review/short/list?media_id=5852&ps=20&sort=0'
 # url = 'https://api.bilibili.com/pgc/review/short/list?media_id=28229676&ps=20&sort=0'
 # url = 'https://api.bilibili.com/pgc/review/short/list?media_id=130412&ps=20&sort=0'
-url = 'https://api.bilibili.com/pgc/review/short/list?media_id=28228119&ps=20&sort=0'
+url = 'https://api.bilibili.com/pgc/review/short/list?media_id=24755609&ps=20&sort=0'
 
 
 # 发送get请求
@@ -32,7 +32,7 @@ s = json_comment['data']  # url中的所有内容
 j = 0
 count = 0
 # lovely = open(file='d:/lovely.txt', encoding='utf-8', mode='w')
-lovely = open(file='d:/SAOAlicization_war_of_underworld_end.txt', encoding='utf-8', mode='w')
+lovely = open(file=r'D:\_01_后端开发笔记\_04_Python以及遇到的各种问题\_02_bilibili_comment\_00_demo\_01_sao_season1\sao_season01.txt', encoding='utf-8', mode='w')
 # head = '''<!DOCTYPE html>
 # <html lang="en">
 # <head>
